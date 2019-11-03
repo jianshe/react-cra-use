@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 // import HomePage from './pages/HomePage';
 import { Provider, Consumer} from './AppContext';
-import HocPage from './pages/HocPage';
+import UseContextPage from './pages/UseContextPage';
+// import UseReducerPage from './pages/UseReducerPage';
+// import HocPage from './pages/HocPage';
+// import UserPage from './pages/UserPage';
+// import HooksPage from './pages/HooksPage';
+
 function Child(props) {
   return (
     <div>
@@ -20,9 +25,13 @@ class App extends Component {
     return (
       <div className="App">
         <Provider value={store}>
-          <Consumer>{ctx => <Child {...ctx} />}</Consumer>
+          {/* <Consumer>{ctx => <Child {...ctx} />}</Consumer> */}
           {/* <HomePage/> */}
-          <HocPage/>
+          {/* <HocPage/> */}
+          {/* <UserPage/> */}
+          {/* <HooksPage/> */}
+          {/* <UseReducerPage/> */}
+          <UseContextPage/>
         </Provider>
         {/* <Child {...store}/> */}
       </div>
